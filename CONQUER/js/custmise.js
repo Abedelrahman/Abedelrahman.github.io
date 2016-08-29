@@ -25,4 +25,18 @@ $(function () {
 		$('html, body').animate({scrollTop : 0},800);
 		return false;
 	});
+	$(window).scroll(function(){
+		if ($(this).scrollTop() < 940) {
+        		$('.nav-justified #ho').addClass('active').siblings().removeClass('active');
+		}
+		if ($(this).scrollTop() > 500) {
+        		$('.nav-justified #ab').addClass('active').siblings().removeClass('active');
+		}
+		if ($(this).scrollTop() > 1725) {
+    		$('.nav-justified #ser').addClass('active').siblings().removeClass('active');
+		}
+		if ($(this).scrollTop() > 3580) {
+    		$('.nav-justified #con').addClass('active').siblings().removeClass('active');
+		} 
+	});
 });
